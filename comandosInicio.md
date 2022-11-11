@@ -45,27 +45,78 @@
 | OpenSuse| 15.1    | 2019 | Suse           |
 | Arch   | 2020.06.01 | 2020 | Arch Linux   |
 | Manjaro| 20.0.3  | 2020 | Manjaro         |
+| Mint   | 19.3    | 2019 | Linux Mint      |
+| Kali   | 2020.1  | 2020 | Offensive Security | 
+| Parrot | 4.8     | 2020 | Parrot Security |
 
-@startuml
-:Main Admin: as Admin
-left to right direction
-rectangle "Linux" {
-  (Start) as Start
-  (Install) as Install
-  (Config) as Config
-  (Use) as Use
-  (Update) as Update
-  (Backup) as Backup
-  (Restore) as Restore
-  (Uninstall) as Uninstall
-  (End) as End
-  Start --> Install
-  Install --> Config
-  Config --> Use
-  Use --> Update
-  Update --> Backup
-  Backup --> Restore
-  Restore --> Uninstall
-  Uninstall --> End
-  Admin --> Start
-}
+#comandos de git 
+
+    - git init => inicializa un repositorio
+    - git add => agrega un archivo al repositorio
+    - git commit => guarda los cambios en el repositorio
+    - git status => muestra el estado del repositorio
+    - git log => muestra el historial de cambios
+    - git log --oneline => muestra el historial de cambios en una sola linea
+    - git log --graph => muestra el historial de cambios en forma de grafo
+    - git log --decorate => muestra el historial de cambios con decoracion
+    - git log --all => muestra el historial de cambios de todas las ramas
+    - git log --author => muestra el historial de cambios de un autor
+    - git log --grep => muestra el historial de cambios con un patron
+    - git log -S => muestra el historial de cambios con un patron
+    - git log --since => muestra el historial de cambios desde una fecha
+    - git log --until => muestra el historial de cambios hasta una fecha
+    - git log --after => muestra el historial de cambios despues de una fecha
+    - git log --before => muestra el historial de cambios antes de una fecha
+    - git log --oneline --graph --decorate --all --author --grep -S --since --until --after --before
+    - git diff => muestra las diferencias entre el repositorio y el directorio de trabajo
+    - git diff --staged => muestra las diferencias entre el repositorio y el area de preparacion
+    - git diff --cached => muestra las diferencias entre el repositorio y el area de preparacion
+    - git diff --name-only => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de nombre de archivos
+    - git diff --name-status => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de nombre de archivos y estado
+    - git diff --stat => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de estadisticas
+    - git diff --summary => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de resumen
+    - git diff --patch => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de parche
+    - git diff --color-words => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de palabras con color
+    - git diff --word-diff => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de palabras
+    - git diff --word-diff-regex => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de palabras con un patron
+    - git diff --check => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de comprobacion 
+    - git diff --binary => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de binario
+    - git diff --raw => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de crudo
+    - git diff --abbrev => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de abreviacion
+    - git diff --full-index => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de indice completo
+    - git diff --src-prefix => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de prefijo de origen
+    - git diff --dst-prefix => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de prefijo de destino
+    - git diff --no-prefix => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de sin prefijo
+    - git diff --diff-algorithm => muestra las diferencias entre el repositorio y el directorio de trabajo en forma de algoritmo de diferencias
+    - git rebase => reorganiza los commits
+    - git rebase --continue => continua el rebase
+    - git rebase --abort => aborta el rebase
+    - git rebase --skip => salta el rebase
+    - git rebase --onto => reorganiza los commits en un rango
+    - git rebase --interactive => reorganiza los commits de forma interactiva
+    - git rebase --merge => reorganiza los commits de forma interactiva con merge 
+    - git rebase --preserve-merges => reorganiza los commits de forma interactiva con merge y preservando los merges
+    - git rebase --root => reorganiza los commits de forma interactiva desde la raiz
+    - git rebase --exec => reorganiza los commits de forma interactiva con un comando
+    - git rollback => reorganiza los commits de forma interactiva con un comando
+
+    #tabla de comandos de git
+
+| Comando | Descripcion |
+|---------|-------------|
+| git init | inicializa un repositorio |
+| git add | agrega un archivo al repositorio |
+| git commit | guarda los cambios en el repositorio |
+| git status | muestra el estado del repositorio |
+| git log | muestra el historial de cambios |
+| git log --oneline | muestra el historial de cambios en una sola linea |
+| git log --graph | muestra el historial de cambios en forma de grafo |
+| git log --decorate | muestra el historial de cambios con decoracion |
+| git log --all | muestra el historial de cambios de todas las ramas |
+| git log --author | muestra el historial de cambios de un autor |
+| git log --grep | muestra el historial de cambios con un patron |
+| git log -S | muestra el historial de cambios con un patron |
+| git log --since | muestra el historial de cambios desde una fecha |
+| git grep --until | muestra el historial de cambios hasta una fecha |
+| git log --after | muestra el historial de cambios despues de una fecha |
+| git log --before | muestra el historial de cambios antes de una fecha |
