@@ -44,5 +44,28 @@
 | CentOS | 8       | 2019 | Red Hat         |
 | OpenSuse| 15.1    | 2019 | Suse           |
 | Arch   | 2020.06.01 | 2020 | Arch Linux   |
+| Manjaro| 20.0.3  | 2020 | Manjaro         |
 
-[ 1 ]: # Path: comandosInicio.md
+@startuml
+:Main Admin: as Admin
+left to right direction
+rectangle "Linux" {
+  (Start) as Start
+  (Install) as Install
+  (Config) as Config
+  (Use) as Use
+  (Update) as Update
+  (Backup) as Backup
+  (Restore) as Restore
+  (Uninstall) as Uninstall
+  (End) as End
+  Start --> Install
+  Install --> Config
+  Config --> Use
+  Use --> Update
+  Update --> Backup
+  Backup --> Restore
+  Restore --> Uninstall
+  Uninstall --> End
+  Admin --> Start
+}
