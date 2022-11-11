@@ -123,5 +123,5 @@
 
 #agregar logos de git y linux
 
-    [logo de git](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png)
-    [logo de linux](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png)
+![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png)
+![linux](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png)
